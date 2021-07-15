@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const axios = require("axios");
 const app = express();
-const port = process.env.PORT 
+const port = process.env.PORT
 
 const base64 = require("js-base64").Base64;
 const fetch = require("node-fetch");
@@ -19,6 +19,9 @@ const cron = require('node-cron')
 //middleware
 app.use(cors());
 
+app.get('/', (req, res) => {
+  console.log('running?')
+})
 
 cron.schedule('* * * * *', () => {
   console.log('running every minute');
