@@ -28,7 +28,7 @@ const sendMessage = async () => {
   const token = client.createToken(user_id)
 
   // channel
-  const channel = client.channel('messaging', 'test-0012')
+  const channel = client.channel('messaging', 'first')
 
   // connect
   await client.connectUser({ id: user_id, image: await profileImage() }, token)
@@ -40,9 +40,9 @@ const sendMessage = async () => {
   await client.disconnectUser()
 }
 
-cron.schedule('10 * * * *', () => {
+cron.schedule('* * * * * *', () => {
   sendMessage();
-  console.log('running every 5 minutes');
+  console.log('running every 15 minutes');
 });
 
 app.listen(() => {
