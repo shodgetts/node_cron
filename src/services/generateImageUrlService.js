@@ -28,7 +28,7 @@ const images = [
 ]
 
 exports.profileImage = async function () {
-  const channel = client.channel('messaging', 'test-0012')
+  const channel = client.channel('messaging', 'first')
 
   const index = Math.floor(Math.random() * 21);
   imagePath = images[index];

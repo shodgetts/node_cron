@@ -12,10 +12,9 @@ app.use(cors());
 // node cron
 const cron = require('node-cron')
 
-
 // for heroku 
 app.get('/', (req, res) => {
-  console.log('running?')
+  return
 })
 
 const { profileImage } = require("./services/generateImageUrlService");
@@ -41,9 +40,9 @@ const sendMessage = async () => {
   await client.disconnectUser()
 }
 
-cron.schedule('*/5 * * * * *', () => {
+cron.schedule('10 * * * *', () => {
   sendMessage();
-  console.log('running every 5 seconds');
+  console.log('running every 5 minutes');
 });
 
 app.listen(() => {

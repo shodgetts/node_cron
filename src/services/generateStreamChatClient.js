@@ -1,4 +1,4 @@
 const StreamChat = require("stream-chat").StreamChat;
-const client = new StreamChat('qtc55pny5xww', '9hrptm6edfg8ygm6hzswpj8rnze94v8ujfmg7drfk8ndaztnqkh875upke6ndypc', { allowServerSideConnect: true });
+const client = new StreamChat('dz5f4d5kzrue', 'msp77tpbfcmmv98pk598jvvu93rygd3nexctp7c74tgyfsfd3ub8d9dg9gtz6a6s', { allowServerSideConnect: true });
 
 exports.client = client;
