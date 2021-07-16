@@ -5,6 +5,7 @@ const fs = require("fs");
 
 // express server
 const app = express();
+console.log(process.env.PORT)
 const port = process.env.PORT
 
 //middleware
