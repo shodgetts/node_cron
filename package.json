@@ -14,9 +14,11 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "fs": "0.0.1-security",
     "js-base64": "^3.6.1",
     "node-cron": "^3.0.0",
     "node-fetch": "^2.6.1",
-    "stream-chat": "^3.12.1"
+    "stream-chat": "^3.12.1",
+    "unique-names-generator": "^4.5.0"
   }
 }
