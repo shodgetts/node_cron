@@ -40,9 +40,9 @@ const sendMessage = async () => {
   await client.disconnectUser()
 }
 
-cron.schedule('30 * * * *', () => {
+cron.schedule('2 * * * *', () => {
   sendMessage();
-  console.log('running every 30 minutes');
+  console.log('running every 2 minutes');
 });
 
 app.listen(process.env.PORT || 5000, () => {
