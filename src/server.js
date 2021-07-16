@@ -40,7 +40,7 @@ const sendMessage = async () => {
   await client.disconnectUser()
 }
 
-cron.schedule('* 30 * * * *', () => {
+cron.schedule('30 * * * *', () => {
   sendMessage();
   console.log('running every 30 minutes');
 });
