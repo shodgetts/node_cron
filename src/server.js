@@ -5,8 +5,6 @@ const fs = require("fs");
 
 // express server
 const app = express();
-console.log(process.env.PORT)
-const port = process.env.PORT
 
 //middleware
 app.use(cors());
@@ -31,7 +29,7 @@ const sendMessage = async () => {
   const token = client.createToken(user_id)
 
   // channel
-  const channel = client.channel(process.env.CHANNEL_TYPE, process.env.CHANNEL_ID)
+  const channel = client.channel('messaging', 'test-0012')
 
   // connect
   await client.connectUser({ id: user_id, image: await profileImage() }, token)
@@ -48,6 +46,6 @@ cron.schedule('*/5 * * * * *', () => {
   console.log('running every 5 seconds');
 });
 
-app.listen(port, () => {
-  console.log(`server running on port ${port}`);
+app.listen(() => {
+  console.log(`server running on port 5000`);
 });
